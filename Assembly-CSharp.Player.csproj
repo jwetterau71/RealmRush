@@ -93,6 +93,11 @@
     <Compile Include="Assets\Tiles\CoordinateLabeler.cs" />
     <Compile Include="Assets\Tiles\Waypoint.cs" />
     <Compile Include="Assets\Enemy\EnemyMover.cs" />
+    <Compile Include="Assets\Tower\TargetLocator.cs" />
+    <Compile Include="Assets\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Tower\Weapon.cs" />
+    <Compile Include="Assets\Enemy\ObjectPool.cs" />
+    <Compile Include="Assets\Enemy\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetPacks\TextMesh Pro\Shaders\TMPro.cginc" />
