@@ -98,6 +98,8 @@
     <Compile Include="Assets\Tower\Weapon.cs" />
     <Compile Include="Assets\Enemy\ObjectPool.cs" />
     <Compile Include="Assets\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Bank\Bank.cs" />
+    <Compile Include="Assets\Tower\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetPacks\TextMesh Pro\Shaders\TMPro.cginc" />
