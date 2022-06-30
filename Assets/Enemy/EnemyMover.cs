@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
@@ -28,7 +29,11 @@ public class EnemyMover : MonoBehaviour
         GameObject parent = GameObject.FindGameObjectWithTag("Path");
         foreach(Transform child in parent.transform)
         {
-            path.Add(child.GetComponent<Waypoint>());
+            Waypoint waypoint = child.GetComponent<Waypoint>();
+            if(waypoint != null)
+            {
+                path.Add(child.GetComponent<Waypoint>());
+            }            
         }        
     }
 
@@ -59,17 +64,14 @@ public class EnemyMover : MonoBehaviour
     }
 
     void DeactivateEnemy()
-    {
-        Debug.Log($"You have failed to kill the enemy attacker!");
-        gameObject.SetActive(false);
+    {        
         if (enemy == null)
         {
             Debug.Log($"ERROR: Enemy Not Found.");
             return;
         }
-        if (enemy.StealGold())
-        {
-            Debug.Log($"ERROR: Bank Problem.");
-        }
+        enemy.StealGold();
+        gameObject.SetActive(false);
+
     }
 }

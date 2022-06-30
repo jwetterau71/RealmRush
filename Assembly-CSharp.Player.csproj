@@ -90,8 +90,8 @@
     <Compile Include="Assets\AssetPacks\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\AssetPacks\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\AssetPacks\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Tiles\CoordinateLabeler.cs" />
-    <Compile Include="Assets\Tiles\Waypoint.cs" />
+    <Compile Include="Assets\Environment\Scripts\CoordinateLabeler.cs" />
+    <Compile Include="Assets\Environment\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Enemy\EnemyMover.cs" />
     <Compile Include="Assets\Tower\TargetLocator.cs" />
     <Compile Include="Assets\Enemy\EnemyHealth.cs" />
