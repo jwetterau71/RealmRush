@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLabeler : MonoBehaviour
 {
-    [SerializeField] Color defaultColor = Color.black;
+    [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
@@ -25,9 +26,10 @@ public class CoordinateLabeler : MonoBehaviour
         {
             DisplayCoordinates();
             UpdateObjectName();
+            label.enabled = true;
         }
 
-        ColorCoordinates();
+        SetLabelColor();
         ToggleLabels();
     }
 
@@ -43,7 +45,7 @@ public class CoordinateLabeler : MonoBehaviour
         transform.parent.name = coordinates.ToString();
     }
 
-    void ColorCoordinates()
+    void SetLabelColor()
     {
         label.color = blockedColor;
 
